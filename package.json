@@ -1,0 +1,12 @@
+{
+  "name": "oeilducyclone",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "welcomattic",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@symfony/webpack-encore": "symfony/webpack-encore",
+    "bootstrap": "^4.1.1"
+  }
+}
