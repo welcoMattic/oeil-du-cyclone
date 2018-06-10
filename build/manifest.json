@@ -1,4 +1,4 @@
 {
-  "build/css/style.css": "http://localhost:8080/build/css/style.css",
-  "build/js/index.js": "http://localhost:8080/build/js/index.js"
+  "build/css/style.css": "/build/css/style.css",
+  "build/js/index.js": "/build/js/index.js"
 }
