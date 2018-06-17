@@ -5,19 +5,18 @@ Encore
     .setPublicPath('/build')
     .cleanupOutputBeforeBuild()
     
-    .addStyleEntry('css/style', './style.scss')
+    .addStyleEntry('css/style', './assets/scss/style.scss')
     .enableSassLoader(sassOptions => {}, {
         resolveUrlLoader: false,
     })
 
-    .addEntry('js/index', './index.js')
+    .addEntry('js/app', './assets/js/app.js')
     .configureBabel(babelConfig => {
         babelConfig.presets.push('env');
     })
 
-    .enableSassLoader()
     .enableSourceMaps(!Encore.isProduction())
-    .enableBuildNotifications()
+    .enableBuildNotifications(!Encore.isProduction())
 
     .autoProvidejQuery()
 ;

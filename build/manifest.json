@@ -1,4 +1,12 @@
 {
+  "build/js/app.js": "/build/js/app.js",
   "build/css/style.css": "/build/css/style.css",
-  "build/js/index.js": "/build/js/index.js"
+  "build/fonts/grandeecp-webfont.woff": "/build/fonts/grandeecp-webfont.2811ee01.woff",
+  "build/fonts/grandeecp-webfont.woff2": "/build/fonts/grandeecp-webfont.6051e9a9.woff2",
+  "build/images/bg-project-1.svg": "/build/images/bg-project-1.61f23ac1.svg",
+  "build/images/bg-project-2.svg": "/build/images/bg-project-2.4530bdd3.svg",
+  "build/images/bg-project-3.svg": "/build/images/bg-project-3.f41c3514.svg",
+  "build/images/bg-project-4.svg": "/build/images/bg-project-4.82b2f532.svg",
+  "build/images/bg-project-5.svg": "/build/images/bg-project-5.d9da6891.svg",
+  "build/images/bg-project-content.svg": "/build/images/bg-project-content.8a4d64b2.svg"
 }
