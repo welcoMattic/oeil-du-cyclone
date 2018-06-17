@@ -43,8 +43,8 @@ a.text-superhero:hover {
     background-position: center center;
 }
 
-$bg: '../svg/bg-project-1.svg', '../svg/bg-project-2.svg', '../svg/bg-project-3.svg', '../svg/bg-project-4.svg', '../svg/bg-project-5.svg';
-// $bg-hover: '../svg/bg-project-1.svg', '../svg/bg-project-2.svg', '../svg/bg-project-3.svg', '../svg/bg-project-4.svg', '../svg/bg-project-5.svg';
+$bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-project-3.svg', '../images/bg-project-4.svg', '../images/bg-project-5.svg';
+// $bg-hover: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-project-3.svg', '../images/bg-project-4.svg', '../images/bg-project-5.svg';
 @for $i from 1 through 5 {
     .project-item:nth-child(#{5}n+#{$i}) {
         background-image: url(nth($bg, $i));
@@ -55,7 +55,7 @@ $bg: '../svg/bg-project-1.svg', '../svg/bg-project-2.svg', '../svg/bg-project-3.
 }
 
 .bg-project-content {
-    background-image: url(../svg/bg-project-content.svg);
+    background-image: url(../images/bg-project-content.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -64,7 +64,7 @@ $bg: '../svg/bg-project-1.svg', '../svg/bg-project-2.svg', '../svg/bg-project-3.
 
 .project-close-btn {
     display: inline-block;
-    background-image: url(/build/images/cross.19c45e22.svg);
+    background-image: url(../images/cross.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
