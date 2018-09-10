@@ -1,33 +1,24 @@
 $theme-colors: (
     "orange": #ff5400
 );
-
 $body-bg: map-get($theme-colors, 'orange');
-
 $dark: #000;
+$carousel-control-opacity: 1;
+$carousel-control-icon-width: 80px;
+$carousel-control-prev-icon-bg: url(../images/arrow-prev.svg);
+$carousel-control-next-icon-bg: url(../images/arrow-next.svg);
 
-@import "node_modules/bootstrap/scss/bootstrap";
-
-@font-face {
-    font-family: 'grandeecpregular';
-    src: url('../fonts/grandeecp-webfont.woff2') format('woff2'),
-         url('../fonts/grandeecp-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.font-grandeecpregular {
-    font-family: 'grandeecpregular';
-}
+@import "~bootstrap/scss/bootstrap";
+@import "font-face";
 
 a.text-superhero:hover {
     color: map-get($theme-colors, 'orange') !important;
     text-shadow: 4px 4px 0px $dark,
-    5px 5px 0px map-get($theme-colors, 'orange'),
-    8px 8px 0px $dark,
-    9px 9px 0px map-get($theme-colors, 'orange'),
-    12px 12px 0px $dark,
-    13px 13px 0px map-get($theme-colors, 'orange');
+                 5px 5px 0px map-get($theme-colors, 'orange'),
+                 8px 8px 0px $dark,
+                 9px 9px 0px map-get($theme-colors, 'orange'),
+                 12px 12px 0px $dark,
+                 13px 13px 0px map-get($theme-colors, 'orange');
 }
 
 .project-item {
@@ -37,10 +28,19 @@ a.text-superhero:hover {
     &:last-child {
         border-bottom: 2px dashed $dark;
     }
+    & h3 {
+        word-wrap: break-word;
+    }
 
     border-top: 2px dashed $dark;
     background-size: cover;
     background-position: center center;
+}
+
+.project-content {
+    border: 3px solid black;
+    min-height: 130px; // temp
+    padding: 0 20px 20px 20px;
 }
 
 $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-project-3.svg', '../images/bg-project-4.svg', '../images/bg-project-5.svg';
@@ -50,30 +50,162 @@ $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-p
         background-image: url(nth($bg, $i));
     }
     // .project-item:hover:nth-child(#{5}n+#{$i}) {
-    //     background-image: url(nth($bg, $i));
+    //     background-image: url(nth($bg-hover, $i));
     // }
 }
 
-.bg-project-content {
-    background-image: url(../images/bg-project-content.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    min-height: 1428px;
+.bg-project-top {
+    display: inline-block;
+    width: 100%;
+
+    .btn-close {
+        display: inline-block;
+        vertical-align: top;
+        background: transparent url(http://localhost:8080/build/images/close.19c45e22.svg);
+        width: 60px;
+        height: 60px;
+        border: none;
+        margin: 10px 10px 10px 0;
+        cursor: pointer;
+    }
+
+    .bg-project-top-bars {
+        display: inline-block;
+        width: 95.4%;
+
+        .bg-project-topbar {
+            display: inline-block;
+            background-color: #000;
+            height: 5px;
+            width: 100%;
+        }
+    }
 }
 
-.project-close-btn {
-    display: inline-block;
-    background-image: url(../images/cross.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    min-height: 35px;
-    min-width: 35px;
-    cursor: pointer;
-    margin: 22px 0 0 24px;
+.bg-project-content {
+    background-image: url(../images/bg-grid-pattern.svg);
+    min-height: 500px;
+    display: block;
+    position: relative;
+    border: 10px solid black;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+
+    .carousel-inner {
+        width: 40%;
+        margin: 0 auto;
+    }
 }
 
 [data-toggle="collapse"] {
     cursor: pointer;
+}
+
+.bg-black {
+    background-color: map-get($theme-colors, 'dark');
+    color: map-get($theme-colors, 'orange');
+}
+
+.text-orange {
+    color: map-get($theme-colors, 'orange') !important;
+}
+
+.with-shadow-dotted-box {
+    display: inline-block;
+    width: auto;
+    margin-top: 100px;
+    padding: 10px 15px;
+    border: 1px map-get($theme-colors, 'orange') solid;
+    background-color: map-get($theme-colors, 'dark');
+    position: relative;
+
+    & .shadow-dotted-box {
+        display: block;
+        height: 55px;
+        width: 265px;
+        border: 1px #ff5400 solid;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP4H8LwjIEogFMlAMa0BHPvOx3YAAAAAElFTkSuQmCC) repeat;
+        top: 10px;
+        position: absolute;
+        left: -10px;
+        clip-path: polygon(0% 0%, 0% 100%, 3% 92%, 3% 0px, 100% 0px, 100% 80%, 4% 80%, 0% 100%, 100% 100%, 100% 0%);
+    }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+@include media-breakpoint-down('sm') {
+    header .nav {
+        display: none !important;
+    }
+
+    .project-content {
+        padding: 0px 15px 15px 15px;
+    }
+
+    .bg-project-top .bg-project-top-bars {
+        width: 78%;
+    }
+}
+
+.stroke {
+    margin: 0;
+    font-family: inherit; font-size: 40px; font-weight: bold;
+    svg { display: block }
+    text {
+        stroke-width: 1;
+    }
+    &.stroke-black {
+        text { stroke: map-get($theme-colors, 'orange') }
+        text { fill: map-get($theme-colors, 'dark') }
+    }
+    &.stroke-orange {
+        text { stroke: map-get($theme-colors, 'dark') }
+        text { fill: map-get($theme-colors, 'orange') }
+    }
+}
+
+.vertical-text {
+    transform: rotate(-90deg);
+}
+
+#presentation-block {
+    position: relative;
+
+    #skills-list {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        a:not(.collapsed) svg text {
+            background: map-get($theme-colors, 'orange');
+        }
+    }
+
+    .site-name {
+        p {
+            font-size: 70px;
+            position: absolute;
+
+            &:first-child {
+                left: -300px;
+                bottom: 190px;
+            }
+
+            &:last-child {
+                right: -300px;
+                top: 255px;
+            }
+        }
+    }
+
+    #presentation-right {
+        padding-left: 150px;
+    }
+
+    #presentation-left-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        background-image: url('../images/tmp.jpg');
+    }
 }

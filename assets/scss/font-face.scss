@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'grandeecpregular';
+    src: url('../fonts/grandeecp-webfont.woff2') format('woff2'),
+    url('../fonts/grandeecp-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-grandeecpregular {
+    font-family: 'grandeecpregular';
+}
+
+@font-face {
+    font-family: 'robotocondensed-italic';
+    src: url('../fonts/robotocondensed-italic-webfont.woff2') format('woff2'),
+    url('../fonts/robotocondensed-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-robotocondensed-italic {
+    font-family: 'robotocondensed-italic';
+}

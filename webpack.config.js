@@ -4,9 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 Encore
     .setOutputPath('build')
     .setPublicPath(Encore.isProduction() ? '/oeil-du-cyclone/build' : '/build')
-    .setManifestKeyPrefix('oeil-du-cyclone')
+    .setManifestKeyPrefix(Encore.isProduction() ? 'oeil-du-cyclone/build' : 'build')
     .cleanupOutputBeforeBuild()
-    
+
     .addStyleEntry('css/style', './assets/scss/style.scss')
     .enableSassLoader(sassOptions => {}, {
         resolveUrlLoader: false,
@@ -19,7 +19,8 @@ Encore
 
     .addPlugin(new CopyWebpackPlugin([
         { from: './assets/fonts', to: 'fonts/' },
-      ]))
+        { from: './assets/images', to: 'images/' },
+    ]))
 
     .enableSourceMaps(!Encore.isProduction())
     .enableBuildNotifications(!Encore.isProduction())

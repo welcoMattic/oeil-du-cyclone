@@ -1,13 +1,17 @@
 {
-  "oeil-du-cyclone/js/app.js": "/oeil-du-cyclone/build/js/app.js",
-  "oeil-du-cyclone/css/style.css": "/oeil-du-cyclone/build/css/style.css",
-  "oeil-du-cyclone/images/cross.svg": "/oeil-du-cyclone/build/images/cross.19c45e22.svg",
-  "oeil-du-cyclone/images/bg-project-4.svg": "/oeil-du-cyclone/build/images/bg-project-4.82b2f532.svg",
-  "oeil-du-cyclone/images/bg-project-3.svg": "/oeil-du-cyclone/build/images/bg-project-3.f41c3514.svg",
-  "oeil-du-cyclone/images/bg-project-1.svg": "/oeil-du-cyclone/build/images/bg-project-1.61f23ac1.svg",
-  "oeil-du-cyclone/fonts/grandeecp-webfont.woff2": "/oeil-du-cyclone/build/fonts/grandeecp-webfont.6051e9a9.woff2",
-  "oeil-du-cyclone/fonts/grandeecp-webfont.woff": "/oeil-du-cyclone/build/fonts/grandeecp-webfont.2811ee01.woff",
-  "oeil-du-cyclone/images/bg-project-content.svg": "/oeil-du-cyclone/build/images/bg-project-content.8a4d64b2.svg",
-  "oeil-du-cyclone/images/bg-project-5.svg": "/oeil-du-cyclone/build/images/bg-project-5.d9da6891.svg",
-  "oeil-du-cyclone/images/bg-project-2.svg": "/oeil-du-cyclone/build/images/bg-project-2.4530bdd3.svg"
+  "oeil-du-cyclone/build/js/app.js": "/oeil-du-cyclone/build/js/app.js",
+  "oeil-du-cyclone/build/css/style.css": "/oeil-du-cyclone/build/css/style.css",
+  "oeil-du-cyclone/build/images/bg-grid-pattern.svg": "/oeil-du-cyclone/build/images/bg-grid-pattern.01430b01.svg",
+  "oeil-du-cyclone/build/images/tmp.jpg": "/oeil-du-cyclone/build/images/tmp.effb384b.jpg",
+  "oeil-du-cyclone/build/fonts/grandeecp-webfont.woff": "/oeil-du-cyclone/build/fonts/grandeecp-webfont.2811ee01.woff",
+  "oeil-du-cyclone/build/fonts/robotocondensed-italic-webfont.woff2": "/oeil-du-cyclone/build/fonts/robotocondensed-italic-webfont.bbd3f68f.woff2",
+  "oeil-du-cyclone/build/images/bg-project-3.svg": "/oeil-du-cyclone/build/images/bg-project-3.f41c3514.svg",
+  "oeil-du-cyclone/build/images/bg-project-1.svg": "/oeil-du-cyclone/build/images/bg-project-1.61f23ac1.svg",
+  "oeil-du-cyclone/build/fonts/grandeecp-webfont.woff2": "/oeil-du-cyclone/build/fonts/grandeecp-webfont.6051e9a9.woff2",
+  "oeil-du-cyclone/build/images/bg-project-4.svg": "/oeil-du-cyclone/build/images/bg-project-4.82b2f532.svg",
+  "oeil-du-cyclone/build/images/arrow-prev.svg": "/oeil-du-cyclone/build/images/arrow-prev.9ffc819d.svg",
+  "oeil-du-cyclone/build/images/bg-project-5.svg": "/oeil-du-cyclone/build/images/bg-project-5.d9da6891.svg",
+  "oeil-du-cyclone/build/images/bg-project-2.svg": "/oeil-du-cyclone/build/images/bg-project-2.4530bdd3.svg",
+  "oeil-du-cyclone/build/images/arrow-next.svg": "/oeil-du-cyclone/build/images/arrow-next.afba59e2.svg",
+  "oeil-du-cyclone/build/fonts/robotocondensed-italic-webfont.woff": "/oeil-du-cyclone/build/fonts/robotocondensed-italic-webfont.84681885.woff"
 }
