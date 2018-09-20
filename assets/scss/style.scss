@@ -21,20 +21,35 @@ a.text-superhero:hover {
                  13px 13px 0px map-get($theme-colors, 'orange');
 }
 
-.project-item {
+#projects-block .card {
+    background-size: cover;
+    background-color: map-get($theme-colors, 'orange');
+    background-position: center center;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    border: none;
+    border-top: 2px dashed #000;
+
     &:first-child {
         border-top: none;
     }
     &:last-child {
         border-bottom: 2px dashed $dark;
     }
-    & h3 {
-        word-wrap: break-word;
-    }
 
-    border-top: 2px dashed $dark;
-    background-size: cover;
-    background-position: center center;
+    .project-item {
+        & h3 {
+            word-wrap: break-word;
+        }
+
+        &:hover h3, &:not(.collapsed) h3 {
+            color: map-get($theme-colors, 'orange') !important;
+            text-shadow: 2px 2px 0 map-get($theme-colors, 'dark'), 2px -2px 0 map-get($theme-colors, 'dark'), -2px 2px 0 map-get($theme-colors, 'dark'), -2px -2px 0 map-get($theme-colors, 'dark'), 2px 0px 0 map-get($theme-colors, 'dark'), 0px 2px 0 map-get($theme-colors, 'dark'), -2px 0px 0 map-get($theme-colors, 'dark'), 0px -2px 0 map-get($theme-colors, 'dark'), 2px 2px 2px rgba(255,84,0,0);
+        }
+    }
 }
 
 .project-content {
@@ -44,24 +59,33 @@ a.text-superhero:hover {
 }
 
 $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-project-3.svg', '../images/bg-project-4.svg', '../images/bg-project-5.svg';
-// $bg-hover: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-project-3.svg', '../images/bg-project-4.svg', '../images/bg-project-5.svg';
-@for $i from 1 through 5 {
-    .project-item:nth-child(#{5}n+#{$i}) {
+@for $i from 1 through length($bg) {
+    #projects-block .card:nth-child(#{length($bg)}n+#{$i}) {
         background-image: url(nth($bg, $i));
     }
-    // .project-item:hover:nth-child(#{5}n+#{$i}) {
-    //     background-image: url(nth($bg-hover, $i));
-    // }
+
+    #projects-block .card:hover:nth-child(#{length($bg)}n+#{$i}) {
+        background-image: none;
+    }
+}
+
+$bg-hover: '../images/projects-hover/1-odc-SURVOL.png', '../images/projects-hover/2-odc-SURVOL.png', '../images/projects-hover/3-odc-SURVOL.png', '../images/projects-hover/4-odc-SURVOL.png', '../images/projects-hover/5-odc-SURVOL.png', '../images/projects-hover/6-odc-SURVOL.png', '../images/projects-hover/7-odc-SURVOL.png', '../images/projects-hover/8-odc-SURVOL.png', '../images/projects-hover/9-odc-SURVOL.png', '../images/projects-hover/10-odc-SURVOL.png', '../images/projects-hover/11-odc-SURVOL.png', '../images/projects-hover/12-odc-SURVOL.png', '../images/projects-hover/13-odc-SURVOL.png', '../images/projects-hover/14-odc-SURVOL.png', '../images/projects-hover/15-odc-SURVOL.png', '../images/projects-hover/16-odc-SURVOL.png', '../images/projects-hover/17-odc-SURVOL.png', '../images/projects-hover/18-odc-SURVOL.png', '../images/projects-hover/19-odc-SURVOL.png', '../images/projects-hover/20-odc-SURVOL.png';
+@for $j from 1 through length($bg-hover) {
+    #projects-block .card:hover:nth-child(#{length($bg-hover)}n+#{$j}) {
+        .project-item {
+            background-image: url(nth($bg-hover, $j));
+        }
+    }
 }
 
 .bg-project-top {
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
     .btn-close {
         display: inline-block;
         vertical-align: top;
-        background: transparent url(http://localhost:8080/build/images/close.19c45e22.svg);
+        background: transparent url(../images/close.svg);
         width: 60px;
         height: 60px;
         border: none;
@@ -70,8 +94,7 @@ $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-p
     }
 
     .bg-project-top-bars {
-        display: inline-block;
-        width: 95.4%;
+        flex: 1;
 
         .bg-project-topbar {
             display: inline-block;
@@ -90,10 +113,28 @@ $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-p
     border: 10px solid black;
     border-right-width: 2px;
     border-bottom-width: 2px;
+    padding-bottom: 50px;
+
+    .carousel-item img {
+        margin: 0 auto;
+        max-height: 480px;
+    }
 
     .carousel-inner {
-        width: 40%;
+        max-width: 60%;
         margin: 0 auto;
+        max-height: 480px;
+    }
+}
+
+.project-tags {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 50px auto;
+
+    .project-tag {
+        padding: 10px 20px;
     }
 }
 
@@ -112,23 +153,30 @@ $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-p
 
 .with-shadow-dotted-box {
     display: inline-block;
+    position: relative;
     width: auto;
     margin-top: 100px;
-    padding: 10px 15px;
-    border: 1px map-get($theme-colors, 'orange') solid;
-    background-color: map-get($theme-colors, 'dark');
-    position: relative;
 
-    & .shadow-dotted-box {
+    h3 {
+        padding: 10px 15px;
+        border: 1px map-get($theme-colors, 'orange') solid;
+        background-color: map-get($theme-colors, 'dark');
+    }
+
+    .shadow-dotted-box {
         display: block;
-        height: 55px;
-        width: 265px;
+        height: 100%;
+        width: 100%;
         border: 1px #ff5400 solid;
         background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWP4H8LwjIEogFMlAMa0BHPvOx3YAAAAAElFTkSuQmCC) repeat;
         top: 10px;
         position: absolute;
         left: -10px;
-        clip-path: polygon(0% 0%, 0% 100%, 3% 92%, 3% 0px, 100% 0px, 100% 80%, 4% 80%, 0% 100%, 100% 100%, 100% 0%);
+        //clip-path: polygon(0% 0%, 0% 100%, 3% 92%, 3% 0px, 100% 0px, 100% 81%, 4% 80%, 0% 100%, 100% 100%, 100% 0%);
+
+        &.shadow-dotted-box-bg-black {
+            background-color: map-get($theme-colors, 'dark');
+        }
     }
 }
 
