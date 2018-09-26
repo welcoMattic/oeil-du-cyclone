@@ -2,12 +2,12 @@ import $ from 'jquery';
 import 'bootstrap';
 
 let primaryColors = [
-    // 'odcorange',
+    'odcorange',
     'odcviolet',
     'odcblue',
     'odcyellow',
     'odcpink',
-    // 'odcred'
+    'odcred'
 ]
 let primaryColor = primaryColors[Math.floor(Math.random() * primaryColors.length)]
 
@@ -33,6 +33,7 @@ $(document).ready(() => {
         }
     });
     $('#projects-block .card .project-item:not(.collapsed) h3').css('color', `var(--${primaryColor})`);
+    $('#presentation-left-background').css('background-color', `var(--${primaryColor})`);
 });
 
 $(document).on('scroll', function () {

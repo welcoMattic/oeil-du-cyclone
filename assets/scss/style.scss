@@ -166,7 +166,7 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
     .project-tags {
         display: flex;
         justify-content: space-between;
-        width: 700px;
+        width: 60%;
         margin: 50px auto;
 
         .project-tag {
@@ -201,6 +201,7 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
     }
 
     #presentation-right {
+        min-height: 650px; // tmp
         padding-left: 150px;
     }
 
@@ -209,7 +210,10 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
         width: 100%;
         height: 100%;
         left: 0px;
-        background-image: url('../images/tmp.jpg');
+        background-image: url('../images/skills/odc-images-presentation-general.png');
+        background-color: var(--odcorange);
+        background-repeat: no-repeat;
+        background-position: 80% 20%;
     }
 }
 
@@ -222,5 +226,11 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
 
     .project-content {
         padding: 0px 15px 15px 15px;
+    }
+
+    #projects-block {
+        .project-tags {
+            width: 90%;
+        }
     }
 }
