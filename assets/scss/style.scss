@@ -1,14 +1,8 @@
 $theme-colors: (
-    'odcorange': #ff5400,
-    'odcviolet': #680ff4,
-    'odcblue': #3bdbb5,
-    'odcyellow': #fff800,
-    'odcpink': #ff31ac,
-    'odcred': #ff0000,
     'dark': #000000
 );
 
-$body-bg: var(--odcorange);
+$body-bg: var(--theme-odc);
 $carousel-control-opacity: 1;
 $carousel-control-icon-width: 80px;
 $carousel-control-prev-icon-bg: url(../images/arrow-prev.svg);
@@ -19,19 +13,24 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
 
 // Common
 [data-toggle="collapse"] {cursor: pointer}
-.bg-black {background-color: var(--dark); color: var(--odcorange);}
-.text-odcprimary {color: var(--odcorange)}
+a:hover {color: var(--theme-odc)}
+.bg-black {background-color: var(--dark); color: var(--theme-odc);}
+.text-odcprimary {color: var(--theme-odc)}
 .text-dark {color: var(--dark)}
 .text-fill-odcprimary {
-    color: var(--odcorange);
+    color: var(--theme-odc);
     text-shadow: 2px 2px 0 var(--dark), 2px -2px 0 var(--dark), -2px 2px 0 var(--dark), -2px -2px 0 var(--dark), 2px 0px 0 var(--dark), 0px 2px 0 var(--dark), -2px 0px 0 var(--dark), 0px -2px 0 var(--dark), 2px 2px 2px var(--dark);
 }
 .text-fill-dark {
     color: var(--dark);
-    text-shadow: 2px 2px 0 var(--odcorange), 2px -2px 0 var(--odcorange), -2px 2px 0 var(--odcorange), -2px -2px 0 var(--odcorange), 2px 0px 0 var(--odcorange), 0px 2px 0 var(--odcorange), -2px 0px 0 var(--odcorange), 0px -2px 0 var(--odcorange), 2px 2px 2px var(--odcorange);
+    text-shadow: 1px 1px 0 var(--theme-odc), 1px -1px 0 var(--theme-odc), -1px 1px 0 var(--theme-odc), -1px -1px 0 var(--theme-odc), 1px 0px 0 var(--theme-odc), 0px 1px 0 var(--theme-odc), -1px 0px 0 var(--theme-odc), 0px -1px 0 var(--theme-odc), 1px 1px 1px var(--theme-odc);
+    &:hover {
+        color: var(--dark);
+        text-decoration: none;
+    }
 }
 .vertical-text {transform: rotate(-90deg)}
-.border-odcprimary {border-top: 2px var(--odcorange) solid; margin-top: 27px; margin-left: 44px;}
+.border-odcprimary {border-top: 2px var(--theme-odc) solid; margin-top: 27px; margin-left: 44px;}
 
 
 // Blocks
@@ -55,15 +54,15 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
 
 .header-container {
     .text-superhero:hover {
-        color: var(--odcorange);
-        text-shadow: 4px 4px 0px var(--dark), 5px 5px 0px var(--odcorange), 8px 8px 0px var(--dark), 9px 9px 0px var(--odcorange), 12px 12px 0px var(--dark), 13px 13px 0px var(--odcorange);
+        color: var(--theme-odc);
+        text-shadow: 4px 4px 0px var(--dark), 5px 5px 0px var(--theme-odc), 8px 8px 0px var(--dark), 9px 9px 0px var(--theme-odc), 12px 12px 0px var(--dark), 13px 13px 0px var(--theme-odc);
     }
 }
 
 #projects-block {
     & .card {
         background-size: cover;
-        background-color: var(--odcorange);
+        background-color: var(--theme-odc);
         background-position: center center;
         display: flex;
         justify-content: center;
@@ -181,6 +180,31 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
     #skills-list {
         margin-top: 50px;
         margin-bottom: 50px;
+
+        li {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                padding: 10px;
+                width: 100%;
+                display: inline-block;
+                margin-bottom: 0;
+
+                &:not(.collapsed) {
+                    background-color: var(--theme-odc);
+                }
+            }
+
+            .card-body {
+                text-transform: uppercase;
+                background-color: var(--dark);
+                border: 1px solid var(--theme-odc);
+                border-radius: 0px;
+            }
+        }
     }
 
     .site-name {
@@ -189,13 +213,13 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
             position: absolute;
 
             &:first-child {
-                left: -260px;
-                bottom: 120px;
+                left: -280px;
+                bottom: 140px;
             }
 
             &:last-child {
-                right: -250px;
-                top: 205px;
+                right: -295px;
+                top: 250px;
             }
         }
     }
@@ -211,7 +235,7 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
         height: 100%;
         left: 0px;
         background-image: url('../images/skills/odc-images-presentation-general.png');
-        background-color: var(--odcorange);
+        background-color: var(--theme-odc);
         background-repeat: no-repeat;
         background-position: 80% 20%;
     }
