@@ -1,23 +1,73 @@
 @font-face {
     font-family: 'grandeecpregular';
-    src: url('../fonts/grandeecp-webfont.woff2') format('woff2'),
-    url('../fonts/grandeecp-webfont.woff') format('woff');
+    src: url('../fonts/grandeecp-webfont.woff2') format('woff2'), url('../fonts/grandeecp-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
 .font-grandeecpregular {
     font-family: 'grandeecpregular';
 }
 
 @font-face {
     font-family: 'robotocondensed-italic';
-    src: url('../fonts/robotocondensed-italic-webfont.woff2') format('woff2'),
-    url('../fonts/robotocondensed-italic-webfont.woff') format('woff');
+    src: url('../fonts/robotocondensed-italic-webfont.woff2') format('woff2'), url('../fonts/robotocondensed-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
 .font-robotocondensed-italic {
     font-family: 'robotocondensed-italic';
 }
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('../fonts/FivoSans-Black.woff2') format('woff2'), url('../fonts/FivoSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+.font-fivo-sans {
+    font-family: 'Fivo Sans';
+}
+
+@font-face {
+    font-family: 'Archivo Narrow';
+    src: url('../fonts/ArchivoNarrow-Bold.woff2') format('woff2'), url('../fonts/ArchivoNarrow-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+.font-archivo-narrow {
+    font-family: 'Archivo Narrow';
+}
+
+@font-face {
+    font-family: 'Sporting Grotesque';
+    src: url('../fonts/SportingGrotesque-Bold.woff2') format('woff2'), url('../fonts/SportingGrotesque-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.font-sporting-grotesque {
+    font-family: 'Sporting Grotesque';
+}
+
+@font-face {
+    font-family: 'druk-wide-medium';
+    src: url('../fonts/DrukWide-Medium.woff2') format('woff2'), url('../fonts/DrukWide-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.font-druk-wide-medium {
+    font-family: 'druk-wide-medium';
+}
+
+@font-face {
+    font-family: 'druk-xx-cond-super';
+    src: url('../fonts/DrukXXCond-Super-Web.woff2') format('woff2'), url('../fonts/DrukXXCond-Super-Web.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.font-druk-xx-cond-super {
+    font-family: 'druk-xx-cond-super';
+}
+
