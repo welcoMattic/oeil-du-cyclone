@@ -45,9 +45,9 @@ a:hover {color: var(--theme-odc)}
 
     #scroller {
         position: absolute;
-        width: 100px;
-        height: 80px;
-        left: calc(50% - 37px);
+        width: 300px;
+        height: 280px;
+        left: calc(50% - 150px);
         bottom: 5px;
         cursor: pointer;
     }
@@ -59,6 +59,18 @@ a:hover {color: var(--theme-odc)}
         text-shadow: 4px 4px 0px var(--dark), 5px 5px 0px var(--theme-odc), 8px 8px 0px var(--dark), 9px 9px 0px var(--theme-odc), 12px 12px 0px var(--dark), 13px 13px 0px var(--theme-odc);
     }
 }
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -105px;
+    visibility: hidden;
+
+    &#contact-anchor {
+        top: -200px;
+    }
+}
+
 
 #projects-block {
     & .card {
@@ -178,6 +190,7 @@ a:hover {color: var(--theme-odc)}
 #presentation-block {
     position: relative;
     z-index: 0;
+    margin-top: 105px;
 
     #skills-list {
         padding-right: 50px;
@@ -311,6 +324,35 @@ a:hover {color: var(--theme-odc)}
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
+
+    form {
+        label {
+            padding: .3rem .6rem;
+            border: 2px solid var(--theme-odc);
+            background-color: var(--dark);
+            color: var(--theme-odc);
+            margin-bottom: 0;
+        }
+
+        input, textarea, button {
+            border-radius: 0;
+            background-color: var(--theme-odc);
+            border-color: var(--theme-odc);
+            color: var(--dark);
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:active {
+            opacity: 0.8;
+        }
+    }
+}
+
+footer {
+    border-top: 2px dashed var(--theme-odc);
 }
 
 .stroke {
