@@ -15,6 +15,7 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
 [data-toggle="collapse"] {cursor: pointer}
 a:hover {color: var(--theme-odc)}
 .bg-black {background-color: var(--dark); color: var(--theme-odc);}
+.bg-odcprimary {background-color: var(--theme-odc); color: var(--dark);}
 .text-odcprimary {color: var(--theme-odc)}
 .text-dark {color: var(--dark)}
 .text-fill-odcprimary {
@@ -40,7 +41,7 @@ a:hover {color: var(--theme-odc)}
     background: url(../images/home.svg) no-repeat center center;
     background-size: cover;
     background-origin: content-box;
-    padding: 150px;
+    padding: 250px;
 
     #scroller {
         position: absolute;
@@ -176,8 +177,10 @@ a:hover {color: var(--theme-odc)}
 
 #presentation-block {
     position: relative;
+    z-index: 0;
 
     #skills-list {
+        padding-right: 50px;
         margin-top: 50px;
         margin-bottom: 50px;
 
@@ -238,12 +241,143 @@ a:hover {color: var(--theme-odc)}
         background-color: var(--theme-odc);
         background-repeat: no-repeat;
         background-position: 80% 20%;
+        background-size: cover;
+    }
+
+    .softwares {
+        li {
+            margin-right: 50px;
+            margin-bottom: 150px;
+            width: 100px;
+            height: 100px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        #logo-photoshop {
+            height: 100%;
+            width: 100%;
+            background-color: var(--theme-odc);
+            background-image: url('../images/adobe-ps.svg');
+        }
+    
+        #logo-illustrator {
+            height: 100%;
+            width: 100%;
+            background-color: var(--theme-odc);
+            background-image: url('../images/adobe-ai.svg');
+        }
+    
+        #logo-indesign {
+            height: 100%;
+            width: 100%;
+            background-color: var(--theme-odc);
+            background-image: url('../images/adobe-id.svg');
+        }
     }
 }
 
+#clients-block {
+    background-image: 
+        linear-gradient(0deg, transparent 24%, var(--dark) 25%, var(--dark) 26%, transparent 26%, transparent 74%, var(--dark) 75%, var(--dark) 76%, transparent 76%, transparent), 
+        linear-gradient(90deg, transparent 24%, var(--dark) 25%, var(--dark) 26%, transparent 26%, transparent 74%, var(--dark) 75%, var(--dark) 76%, transparent 76%, transparent);
+    height: 100%;
+    background-size: 100px 100px;
+    padding-bottom: 100px;
+
+    div.d-flex.flex-column.w-100:first-child {
+        z-index: 0;
+        margin-top: -50px;
+    }
+
+    #clients-grid {
+        img {
+            margin: 50px;
+            object-fit: contain;
+        }
+    }
+    
+}
+
+#contact-block {
+    h3 {
+        font-size: 600px;
+        margin-top: -200px;
+        margin-left: 60px;
+
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 27.8%, var(--theme-odc) 27.8%, var(--theme-odc) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+}
+
+.stroke {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.3rem;
+    padding: .3rem .6rem;
+    border: 2px solid var(--theme-odc);
+    background-color: var(--dark);
+    
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -.8rem;
+        left: -.8rem;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--theme-odc);
+        background-color: var(--dark);
+        background-image: radial-gradient(var(--theme-odc) 15%, transparent 16%), radial-gradient(var(--theme-odc) 15%, transparent 16%);
+        background-size: 7px 7px;
+        background-position: 0 0, 10px 10px;
+    }
+}
+
+.stroke--double {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1.3rem;
+    padding: .3rem .6rem;
+    border: 2px solid var(--dark);
+    background-color: var(--theme-odc);
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -.5rem;
+        right: -.5rem;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--dark);
+        background-color: var(--theme-odc);
+        z-index: -3;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -.9rem;
+        right: -.9rem;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--dark);
+        background-color: var(--theme-odc);
+        z-index: -4;
+    }
+}
 
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 @include media-breakpoint-down('sm') {
+    .home-img {
+        padding: 100px;
+    }
+
     header .nav {
         display: none !important;
     }

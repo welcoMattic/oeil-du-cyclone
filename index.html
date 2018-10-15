@@ -1288,50 +1288,55 @@
                         </div>
                     </div>
                     <div class="col-md-6 py-5" id="presentation-right">
-                        <div class="with-shadow-dotted-box">
-                            <h3 class="text-uppercase text-odcprimary font-robotocondensed-italic">
-                                Guillaume Brindon
-                            </h3>
-                            <div class="shadow-dotted-box"></div>
-                        </div>
+                        <h3 class="text-uppercase text-odcprimary font-robotocondensed-italic stroke">
+                            Guillaume Brindon
+                        </h3>
 
                         <div id="skills-accordion">
                             <ul class="list-unstyled" id="skills-list">
                                 <li>
-                                    <a href="#collapseSkill1" class="text-fill-dark h1 font-fivo-sans collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill1">
+                                    <a href="#collapseSkill1" class="text-fill-dark h1 font-fivo-sans collapsed" 
+                                       data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill1">
                                         Graphisme
                                     </a>
-                                    <div class="collapse" id="collapseSkill1" data-parent="#skills-accordion">
+                                    <div class="collapse skill-content" id="collapseSkill1" data-parent="#skills-accordion" 
+                                         data-bg-file="odc-images-presentation-graphisme.png" data-bg-position="40% 20%">
                                         <div class="card card-body">
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#collapseSkill2" class="text-fill-dark h1 font-fivo-sans collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill2">
+                                    <a href="#collapseSkill2" class="text-fill-dark h1 font-fivo-sans collapsed" 
+                                       data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill2">
                                         Mise en page / Édition
                                     </a>
-                                    <div class="collapse" id="collapseSkill2" data-parent="#skills-accordion">
+                                    <div class="collapse skill-content" id="collapseSkill2" data-parent="#skills-accordion" 
+                                         data-bg-file="odc-images-presentation-edition-miseenpage.png" data-bg-position="40% 20%">
                                         <div class="card card-body">
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#collapseSkill3" class="text-fill-dark h1 font-fivo-sans collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill3">
+                                    <a href="#collapseSkill3" class="text-fill-dark h1 font-fivo-sans collapsed" 
+                                       data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill3">
                                         Illustrations vectorielles
                                     </a>
-                                    <div class="collapse" id="collapseSkill3" data-parent="#skills-accordion">
+                                    <div class="collapse skill-content" id="collapseSkill3" data-parent="#skills-accordion"
+                                         data-bg-file="odc-images-presentation-edition-illustration.png" data-bg-position="100% 20%">
                                         <div class="card card-body">
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                         </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#collapseSkill4" class="text-fill-dark h1 font-fivo-sans collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill4">
+                                    <a href="#collapseSkill4" class="text-fill-dark h1 font-fivo-sans collapsed" 
+                                       data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseSkill4">
                                         Webdesign
                                     </a>
-                                    <div class="collapse" id="collapseSkill4" data-parent="#skills-accordion">
+                                    <div class="collapse skill-content" id="collapseSkill4" data-parent="#skills-accordion" 
+                                         data-bg-file="odc-images-presentation-webdesign.png" data-bg-position="100% 20%">
                                         <div class="card card-body">
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                                         </div>
@@ -1340,19 +1345,53 @@
                             </ul>
                         </div>
 
-                        <div>
-                            <h3 class="text-uppercase text-odcprimary font-robotocondensed-italic">
+                        <div class="font-robotocondensed-italic">
+                            <h3 class="text-uppercase text-odcprimary">
                                 Maîtrise des logiciels
                             </h3>
-                            <ul class="list-unstyled">
-                                <li class="text-uppercase text-odcprimary">Photoshop</li>
-                                <li class="text-uppercase text-odcprimary">Illustrator</li>
-                                <li class="text-uppercase text-odcprimary">InDesign</li>
+                            <ul class="list-unstyled d-flex softwares">
+                                <li class="text-uppercase text-odcprimary">
+                                    <div id="logo-photoshop"></div>
+                                    Photoshop
+                                </li>
+                                <li class="text-uppercase text-odcprimary">
+                                    <div id="logo-illustrator"></div>
+                                    Illustrator
+                                </li>
+                                <li class="text-uppercase text-odcprimary">
+                                    <div id="logo-indesign"></div>
+                                    InDesign
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row bg-odcprimary" id="clients-block">
+            <div class="d-flex flex-column w-100">
+                <h3 class="h1 text-center w-50 align-self-center font-druk-wide-medium stroke--double clients-title ">Références clients</h3>
+            </div>
+            <div id="clients-grid">
+                <div class="d-flex flex-row flex-wrap justify-content-around">
+                    <img src="assets/images/clients/odc-logo-client-arte-creative.png" alt="Logo ARTE">
+                    <img src="assets/images/clients/odc-logo-client-tsvp.png" alt="Logo Tournez s'il vous plait">
+                    <img src="assets/images/clients/odc-logo-client-nanarland.png" alt="Logo Nanarland">
+                    <img src="assets/images/clients/odc-logo-client-pifff.png" alt="Logo Pifff">
+                    <img src="assets/images/clients/odc-logo-client-hallucollec.png" alt="Logo Hallucinations collectives">
+                    <img src="assets/images/clients/odc-logo-client-lecargo.png" alt="Logo Le Cargö">
+                </div>
+            </div>
+        </div>
+
+        <div class="row bg-dark" id="contact-block">
+            <h3 class="font-druk-xx-cond-super text-odcprimary">CONTACT</h3>
+            <form action="">
+                <input type="text" name="name" id="name">
+                <input type="email" name="email" id="email">
+                <textarea name="message" id="messafe" cols="30" rows="10"></textarea>
+            </form>
         </div>
     </div>
     <script type="text/javascript" src="build/js/app.js"></script>

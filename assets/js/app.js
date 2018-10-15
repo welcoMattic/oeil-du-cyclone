@@ -39,3 +39,19 @@ $('.project-close-btn').on('click', event => {
     const $target = $($(event.currentTarget).data('target'));
     $target.collapse('hide');
 });
+
+$('.skill-content').on('shown.bs.collapse', function (event) {
+    let bgFile = $(this).data('bg-file');
+    let bgPosition = $(this).data('bg-position');
+    $('#presentation-left-background')
+        .css('background-image', `url(build/images/skills/${bgFile})`)
+        .css('background-position', bgPosition);
+});
+
+
+
+$('#collapseSkill1, #collapseSkill2, #collapseSkill3, #collapseSkill4').on('hidden.bs.collapse', event => {
+    $('#presentation-left-background')
+        .css('background-image', 'url(build/images/skills/odc-images-presentation-general.png)')
+        .css('background-position', '80% 20%');
+});
