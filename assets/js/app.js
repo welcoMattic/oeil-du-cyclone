@@ -1,11 +1,28 @@
 import $ from 'jquery';
 import 'bootstrap';
 
-let primaryColors = ['#ff5400', '#680ff4', '#3bdbb5', '#fff800', '#ff31ac', '#ff0000'];
+// x4 soft colors to get more chances
+let primaryColors = [
+    '#ff5500', '#680ff4', '#3bdbb5', '#fff800', '#ff31ac', '#ff0000', // hard colors
+    '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
+    '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
+    '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
+    '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
+];
+let secondaryColors = {
+    '#e6fffb' : '#204bbb', 
+    '#ffe9ba' : '#3201bc', 
+    '#d5dfd6' : '#d81d32',
+};
+
 let primaryColor = primaryColors[Math.floor(Math.random() * primaryColors.length)];
+let secondaryColor = secondaryColors[primaryColor] || '#000000';
+
+console.log(primaryColor, secondaryColor);
 
 $(document).ready(() => {
-    $('html').attr('style', `--theme-odc: ${primaryColor}`);
+    $('html').attr('style', `--theme-odc: ${primaryColor}; --theme-odc-sec: ${secondaryColor}; --dark: ${secondaryColor}`);
+
     $('#projects-block .card .project-item').hover(function (event) {
         if (event.type === 'mouseenter') {
             $(this).find('h3')
@@ -47,8 +64,6 @@ $('.skill-content').on('shown.bs.collapse', function (event) {
         .css('background-image', `url(build/images/skills/${bgFile})`)
         .css('background-position', bgPosition);
 });
-
-
 
 $('#collapseSkill1, #collapseSkill2, #collapseSkill3, #collapseSkill4').on('hidden.bs.collapse', event => {
     $('#presentation-left-background')

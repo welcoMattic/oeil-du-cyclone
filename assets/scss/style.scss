@@ -14,19 +14,19 @@ $carousel-control-next-icon-bg: url(../images/arrow-next.svg);
 // Common
 [data-toggle="collapse"] {cursor: pointer}
 a:hover {color: var(--theme-odc)}
-.bg-black {background-color: var(--dark); color: var(--theme-odc);}
-.bg-odcprimary {background-color: var(--theme-odc); color: var(--dark);}
+.bg-dark {background-color: var(--theme-odc-sec) !important; color: var(--theme-odc) !important;}
+.bg-odcprimary {background-color: var(--theme-odc); color: var(--theme-odc-sec);}
 .text-odcprimary {color: var(--theme-odc)}
-.text-dark {color: var(--dark)}
+.text-dark {color: var(--theme-odc-sec) !important}
 .text-fill-odcprimary {
     color: var(--theme-odc);
-    text-shadow: 2px 2px 0 var(--dark), 2px -2px 0 var(--dark), -2px 2px 0 var(--dark), -2px -2px 0 var(--dark), 2px 0px 0 var(--dark), 0px 2px 0 var(--dark), -2px 0px 0 var(--dark), 0px -2px 0 var(--dark), 2px 2px 2px var(--dark);
+    text-shadow: 2px 2px 0 var(--theme-odc-sec), 2px -2px 0 var(--theme-odc-sec), -2px 2px 0 var(--theme-odc-sec), -2px -2px 0 var(--theme-odc-sec), 2px 0px 0 var(--theme-odc-sec), 0px 2px 0 var(--theme-odc-sec), -2px 0px 0 var(--theme-odc-sec), 0px -2px 0 var(--theme-odc-sec), 2px 2px 2px var(--theme-odc-sec);
 }
 .text-fill-dark {
-    color: var(--dark);
+    color: var(--theme-odc-sec);
     text-shadow: 1px 1px 0 var(--theme-odc), 1px -1px 0 var(--theme-odc), -1px 1px 0 var(--theme-odc), -1px -1px 0 var(--theme-odc), 1px 0px 0 var(--theme-odc), 0px 1px 0 var(--theme-odc), -1px 0px 0 var(--theme-odc), 0px -1px 0 var(--theme-odc), 1px 1px 1px var(--theme-odc);
     &:hover {
-        color: var(--dark);
+        color: var(--theme-odc-sec);
         text-decoration: none;
     }
 }
@@ -38,10 +38,15 @@ a:hover {color: var(--theme-odc)}
 .home-img {
     position: relative;
     height: 100vh;
-    background: url(../images/home.svg) no-repeat center center;
-    background-size: cover;
-    background-origin: content-box;
-    padding: 250px;
+    -webkit-mask-image: url(../images/home.svg);
+    mask-image: url(../images/home.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-origin: content-box;
+    mask-origin: content-box;
+    background-color: var(--theme-odc-sec);
 
     #scroller {
         position: absolute;
@@ -56,7 +61,7 @@ a:hover {color: var(--theme-odc)}
 .header-container {
     .text-superhero:hover {
         color: var(--theme-odc);
-        text-shadow: 4px 4px 0px var(--dark), 5px 5px 0px var(--theme-odc), 8px 8px 0px var(--dark), 9px 9px 0px var(--theme-odc), 12px 12px 0px var(--dark), 13px 13px 0px var(--theme-odc);
+        text-shadow: 4px 4px 0px var(--theme-odc-sec), 5px 5px 0px var(--theme-odc), 8px 8px 0px var(--theme-odc-sec), 9px 9px 0px var(--theme-odc), 12px 12px 0px var(--theme-odc-sec), 13px 13px 0px var(--theme-odc);
     }
 }
 
@@ -87,7 +92,7 @@ a:hover {color: var(--theme-odc)}
             border-top: none;
         }
         &:last-child {
-            border-bottom: 2px dashed var(--dark);
+            border-bottom: 2px dashed var(--theme-odc-sec);
         }
 
         .project-item {
@@ -216,7 +221,7 @@ a:hover {color: var(--theme-odc)}
 
             .card-body {
                 text-transform: uppercase;
-                background-color: var(--dark);
+                background-color: var(--theme-odc-sec);
                 border: 1px solid var(--theme-odc);
                 border-radius: 0px;
             }
@@ -294,8 +299,8 @@ a:hover {color: var(--theme-odc)}
 
 #clients-block {
     background-image: 
-        linear-gradient(0deg, transparent 24%, var(--dark) 25%, var(--dark) 26%, transparent 26%, transparent 74%, var(--dark) 75%, var(--dark) 76%, transparent 76%, transparent), 
-        linear-gradient(90deg, transparent 24%, var(--dark) 25%, var(--dark) 26%, transparent 26%, transparent 74%, var(--dark) 75%, var(--dark) 76%, transparent 76%, transparent);
+        linear-gradient(0deg, transparent 24%, var(--theme-odc-sec) 25%, var(--theme-odc-sec) 26%, transparent 26%, transparent 74%, var(--theme-odc-sec) 75%, var(--theme-odc-sec) 76%, transparent 76%, transparent), 
+        linear-gradient(90deg, transparent 24%, var(--theme-odc-sec) 25%, var(--theme-odc-sec) 26%, transparent 26%, transparent 74%, var(--theme-odc-sec) 75%, var(--theme-odc-sec) 76%, transparent 76%, transparent);
     height: 100%;
     background-size: 100px 100px;
     padding-bottom: 100px;
@@ -329,7 +334,7 @@ a:hover {color: var(--theme-odc)}
         label {
             padding: .3rem .6rem;
             border: 2px solid var(--theme-odc);
-            background-color: var(--dark);
+            background-color: var(--theme-odc-sec);
             color: var(--theme-odc);
             margin-bottom: 0;
         }
@@ -338,7 +343,7 @@ a:hover {color: var(--theme-odc)}
             border-radius: 0;
             background-color: var(--theme-odc);
             border-color: var(--theme-odc);
-            color: var(--dark);
+            color: var(--theme-odc-sec);
         }
 
         button:hover {
@@ -362,7 +367,7 @@ footer {
     margin: 1.3rem;
     padding: .3rem .6rem;
     border: 2px solid var(--theme-odc);
-    background-color: var(--dark);
+    background-color: var(--theme-odc-sec);
     
     &::before {
         content: "";
@@ -373,7 +378,7 @@ footer {
         width: 100%;
         height: 100%;
         border: 2px solid var(--theme-odc);
-        background-color: var(--dark);
+        background-color: var(--theme-odc-sec);
         background-image: radial-gradient(var(--theme-odc) 15%, transparent 16%), radial-gradient(var(--theme-odc) 15%, transparent 16%);
         background-size: 7px 7px;
         background-position: 0 0, 10px 10px;
@@ -386,7 +391,7 @@ footer {
     vertical-align: top;
     margin: 1.3rem;
     padding: .3rem .6rem;
-    border: 2px solid var(--dark);
+    border: 2px solid var(--theme-odc-sec);
     background-color: var(--theme-odc);
 
     &::before {
@@ -396,7 +401,7 @@ footer {
         right: -.5rem;
         width: 100%;
         height: 100%;
-        border: 2px solid var(--dark);
+        border: 2px solid var(--theme-odc-sec);
         background-color: var(--theme-odc);
         z-index: -3;
     }
@@ -408,7 +413,7 @@ footer {
         right: -.9rem;
         width: 100%;
         height: 100%;
-        border: 2px solid var(--dark);
+        border: 2px solid var(--theme-odc-sec);
         background-color: var(--theme-odc);
         z-index: -4;
     }
