@@ -36,11 +36,17 @@ $(document).ready(() => {
 
     $('#projects-block .card').hover(function (event) {
         if (event.type === 'mouseenter') {
+            $(this).find('.bg-card').show();
+            $(this).find('.bg-card-hover').addClass('active');
             $(this).find('.project-item h3')
                 .addClass('text-fill-odcprimary').removeClass('text-dark');
         } else if ($(this).find('.project-item').hasClass('collapsed')) {
+            $(this).find('.bg-card-hover').removeClass('active');
             $(this).find('.project-item h3')
                 .removeClass('text-fill-odcprimary').addClass('text-dark');
+        } else if (event.type === 'mouseleave' && !$(this).find('.project-item').hasClass('collapsed')) {
+            $(this).find('.bg-card-hover').addClass('active');
+            $(this).find('.bg-card').hide();
         }
     });
 

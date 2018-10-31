@@ -163,9 +163,9 @@ a:hover {color: var(--theme-odc)}
 
     $bg-hover: '../images/projects-hover/1-odc-SURVOL-noir.png', '../images/projects-hover/2-odc-SURVOL-noir.png', '../images/projects-hover/3-odc-SURVOL-noir.png', '../images/projects-hover/4-odc-SURVOL-noir.png', '../images/projects-hover/5-odc-SURVOL-noir.png', '../images/projects-hover/6-odc-SURVOL-noir.png', '../images/projects-hover/7-odc-SURVOL-noir.png', '../images/projects-hover/8-odc-SURVOL-noir.png', '../images/projects-hover/9-odc-SURVOL-noir.png', '../images/projects-hover/10-odc-SURVOL-noir.png', '../images/projects-hover/11-odc-SURVOL-noir.png', '../images/projects-hover/12-odc-SURVOL-noir.png', '../images/projects-hover/13-odc-SURVOL-noir.png', '../images/projects-hover/14-odc-SURVOL-noir.png', '../images/projects-hover/15-odc-SURVOL-noir.png', '../images/projects-hover/16-odc-SURVOL-noir.png', '../images/projects-hover/17-odc-SURVOL-noir.png', '../images/projects-hover/18-odc-SURVOL-noir.png', '../images/projects-hover/19-odc-SURVOL-noir.png', '../images/projects-hover/20-odc-SURVOL-noir.png';
     @for $j from 1 through length($bg-hover) {
-        & .card:hover:nth-child(#{length($bg-hover)}n+#{$j}) {
+        & .card:nth-child(#{length($bg-hover)}n+#{$j}) {
             .project-item {
-                .bg-card-hover {
+                .bg-card-hover.active {
                     position: absolute;
                     top: 0;
                     right: 0;
