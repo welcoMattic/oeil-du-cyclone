@@ -96,8 +96,11 @@ a:hover {color: var(--theme-odc)}
         }
 
         .project-item {
+            position: relative;
             & h3 {
+                position: relative;
                 word-wrap: break-word;
+                z-index: 100;
             }
         }
     }
@@ -134,26 +137,45 @@ a:hover {color: var(--theme-odc)}
         padding: 0 20px 20px 20px;
     }
 
+    .card {
+        position: relative;
+    }
+
     $bg: '../images/bg-project-1.svg', '../images/bg-project-2.svg', '../images/bg-project-3.svg', '../images/bg-project-4.svg', '../images/bg-project-5.svg';
+    
     @for $i from 1 through length($bg) {
-        & .card:nth-child(#{length($bg)}n+#{$i}) {
+        & .card:nth-child(#{length($bg)}n+#{$i}) .bg-card {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            cursor: pointer;
             background: url(nth($bg, $i));
             background-size: cover;
             background-position: center center;
         }
 
-        & .card:hover:nth-child(#{length($bg)}n+#{$i}) {
+        & .card:hover:nth-child(#{length($bg)}n+#{$i}) .bg-card {
             background-image: none;
         }
     }
 
-    $bg-hover: '../images/projects-hover/1-odc-SURVOL.png', '../images/projects-hover/2-odc-SURVOL.png', '../images/projects-hover/3-odc-SURVOL.png', '../images/projects-hover/4-odc-SURVOL.png', '../images/projects-hover/5-odc-SURVOL.png', '../images/projects-hover/6-odc-SURVOL.png', '../images/projects-hover/7-odc-SURVOL.png', '../images/projects-hover/8-odc-SURVOL.png', '../images/projects-hover/9-odc-SURVOL.png', '../images/projects-hover/10-odc-SURVOL.png', '../images/projects-hover/11-odc-SURVOL.png', '../images/projects-hover/12-odc-SURVOL.png', '../images/projects-hover/13-odc-SURVOL.png', '../images/projects-hover/14-odc-SURVOL.png', '../images/projects-hover/15-odc-SURVOL.png', '../images/projects-hover/16-odc-SURVOL.png', '../images/projects-hover/17-odc-SURVOL.png', '../images/projects-hover/18-odc-SURVOL.png', '../images/projects-hover/19-odc-SURVOL.png', '../images/projects-hover/20-odc-SURVOL.png';
+    $bg-hover: '../images/projects-hover/1-odc-SURVOL-noir.png', '../images/projects-hover/2-odc-SURVOL-noir.png', '../images/projects-hover/3-odc-SURVOL-noir.png', '../images/projects-hover/4-odc-SURVOL-noir.png', '../images/projects-hover/5-odc-SURVOL-noir.png', '../images/projects-hover/6-odc-SURVOL-noir.png', '../images/projects-hover/7-odc-SURVOL-noir.png', '../images/projects-hover/8-odc-SURVOL-noir.png', '../images/projects-hover/9-odc-SURVOL-noir.png', '../images/projects-hover/10-odc-SURVOL-noir.png', '../images/projects-hover/11-odc-SURVOL-noir.png', '../images/projects-hover/12-odc-SURVOL-noir.png', '../images/projects-hover/13-odc-SURVOL-noir.png', '../images/projects-hover/14-odc-SURVOL-noir.png', '../images/projects-hover/15-odc-SURVOL-noir.png', '../images/projects-hover/16-odc-SURVOL-noir.png', '../images/projects-hover/17-odc-SURVOL-noir.png', '../images/projects-hover/18-odc-SURVOL-noir.png', '../images/projects-hover/19-odc-SURVOL-noir.png', '../images/projects-hover/20-odc-SURVOL-noir.png';
     @for $j from 1 through length($bg-hover) {
         & .card:hover:nth-child(#{length($bg-hover)}n+#{$j}) {
             .project-item {
-                background: url(nth($bg-hover, $j)) no-repeat;
-                background-size: cover;
-                background-position: center center;
+                .bg-card-hover {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    cursor: pointer;
+                    background: url(nth($bg-hover, $j)) no-repeat;
+                    background-size: cover;
+                    background-position: center center;
+                }
             }
         }
     }
@@ -255,7 +277,6 @@ a:hover {color: var(--theme-odc)}
         width: 100%;
         height: 100%;
         left: 0px;
-        background-image: url('../images/skills/odc-images-presentation-general.png');
         background-color: var(--theme-odc);
         background-repeat: no-repeat;
         background-position: 80% 20%;
@@ -277,8 +298,8 @@ a:hover {color: var(--theme-odc)}
         #logo-photoshop {
             height: 100%;
             width: 100%;
-            background-color: var(--theme-odc);
-            background-image: url('../images/adobe-ps.svg');
+            background-color: var(--theme-odc-sec);
+            mask-image: url('../images/adobe-ps.svg');
         }
     
         #logo-illustrator {
@@ -325,7 +346,7 @@ a:hover {color: var(--theme-odc)}
         margin-top: -200px;
         margin-left: 60px;
 
-        background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 27.8%, var(--theme-odc) 27.8%, var(--theme-odc) 100%);
+        background: linear-gradient(to bottom, var(--theme-odc-sec) 0%,var(--theme-odc-sec) 27.8%, var(--theme-odc) 27.8%, var(--theme-odc) 100%);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
     }
