@@ -192,13 +192,11 @@ a:hover {color: var(--theme-odc)}
 
         .carousel-item img {
             margin: 0 auto;
-            max-height: 480px;
+            max-width: 960px;
         }
 
         .carousel-inner {
-            max-width: 60%;
             margin: 0 auto;
-            max-height: 480px;
         }
     }
 
@@ -443,7 +441,7 @@ footer {
 // Media of at most the maximum breakpoint width. No query for the largest breakpoint.
 @include media-breakpoint-down('sm') {
     .home-img {
-        padding: 100px;
+        padding: 0;
     }
 
     header .nav {
@@ -457,6 +455,26 @@ footer {
     #projects-block {
         .project-tags {
             width: 90%;
+        }
+    }
+
+    #projects-block .bg-project-content .carousel-item img {
+        max-width: 480px;
+    }
+}
+
+@include media-breakpoint-down('lg') {
+    #projects-block .bg-project-content .carousel-item img {
+        max-width: 720px;
+    }
+
+    .home-img {
+        padding: 0;
+    }
+
+    .nav {
+        hr {
+            display: none;
         }
     }
 }
