@@ -32,7 +32,7 @@ a:hover {color: var(--theme-odc)}
 }
 .vertical-text {transform: rotate(-90deg)}
 .border-odcprimary {border-top: 2px var(--theme-odc) solid; margin-top: 27px; margin-left: 44px;}
-
+.w-33 { width: 33.3% }
 
 // Blocks
 .home-img {
@@ -234,6 +234,10 @@ a:hover {color: var(--theme-odc)}
                 display: inline-block;
                 margin-bottom: 0;
 
+                &:hover {
+                    background-color: var(--theme-odc);
+                }
+
                 &:not(.collapsed) {
                     background-color: var(--theme-odc);
                 }
@@ -296,8 +300,8 @@ a:hover {color: var(--theme-odc)}
         #logo-photoshop {
             height: 100%;
             width: 100%;
-            background-color: var(--theme-odc-sec);
-            mask-image: url('../images/adobe-ps.svg');
+            background-color: var(--theme-odc);
+            background-image: url('../images/adobe-ps.svg');
         }
     
         #logo-illustrator {
@@ -330,9 +334,50 @@ a:hover {color: var(--theme-odc)}
     }
 
     #clients-grid {
-        img {
-            margin: 50px;
-            object-fit: contain;
+        overflow: hidden;
+        margin: 0 50px;
+
+        a {
+            position: relative;
+
+            &:hover::before {
+                content: '';
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                z-index: 100;
+            }
+
+            &.pen-1:hover::before {
+                background-image: url(../images/clients/motif/odc-entoure-1.png);
+            }
+
+            &.pen-2:hover::before {
+                background-image: url(../images/clients/motif/odc-entoure-2.png);
+            }
+
+            &.pen-3:hover::before {
+                background-image: url(../images/clients/motif/odc-entoure-3.png);
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            img {
+                object-fit: contain;
+                height: 350px;
+                padding: 50px;
+                width: 100%;
+                transition: all .5s;
+            }
         }
     }
     
@@ -460,6 +505,17 @@ footer {
 
     #projects-block .bg-project-content .carousel-item img {
         max-width: 480px;
+    }
+
+    #clients-block #clients-grid img {
+        padding: 20px;
+    }
+}
+
+@include media-breakpoint-down('md') {
+    #clients-block #clients-grid img {
+        padding: 20px;
+        height: 100px;
     }
 }
 
