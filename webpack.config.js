@@ -3,8 +3,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 Encore
     .setOutputPath('build')
-    .setPublicPath(Encore.isProduction() ? '/oeil-du-cyclone/build' : '/build')
-    .setManifestKeyPrefix(Encore.isProduction() ? 'oeil-du-cyclone/build' : 'build')
+    .setPublicPath(Encore.isProduction() ? '/build' : '/build')
+    .setManifestKeyPrefix(Encore.isProduction() ? 'build' : 'build')
     .cleanupOutputBeforeBuild()
 
     .addStyleEntry('css/style', './assets/scss/style.scss')
