@@ -71,21 +71,6 @@ $(document).ready(() => {
             $(img).parent().css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
         }
     });
-
-    $('.card').each(function(i, card) {
-        if (colorDir === 'bleu') {
-            $(card).find('.bg-card').css({'filter': 'invert(15%) sepia(56%) saturate(6806%) hue-rotate(227deg) brightness(85%) contrast(77%)'});
-            $(card).find('.bg-card-hover').css({'filter': 'invert(15%) sepia(56%) saturate(6806%) hue-rotate(227deg) brightness(85%) contrast(77%)'});
-        }
-        if (colorDir === 'violet') {
-            $(card).find('.bg-card').css({'filter': 'invert(13%) sepia(88%) saturate(5645%) hue-rotate(258deg) brightness(69%) contrast(127%)'});
-            $(card).find('.bg-card-hover').css({'filter': 'invert(13%) sepia(88%) saturate(5645%) hue-rotate(258deg) brightness(69%) contrast(127%)'});
-        }
-        if (colorDir === 'rouge') {
-            $(card).find('.bg-card').css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
-            $(card).find('.bg-card-hover').css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
-        }
-    });
 });
 
 $(document).on('scroll', function () {

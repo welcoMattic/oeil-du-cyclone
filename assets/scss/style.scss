@@ -158,6 +158,7 @@ a:hover {color: var(--theme-odc)}
 
         & .card:hover:nth-child(#{length($bg)}n+#{$i}) .bg-card {
             background-image: none;
+            opacity: 0;
         }
     }
 
@@ -165,6 +166,9 @@ a:hover {color: var(--theme-odc)}
     @for $j from 1 through length($bg-hover) {
         & .card:nth-child(#{length($bg-hover)}n+#{$j}) {
             .project-item {
+                .bg-card-hover {
+                    opacity: 0;
+                }
                 .bg-card-hover.active {
                     position: absolute;
                     top: 0;
@@ -175,6 +179,8 @@ a:hover {color: var(--theme-odc)}
                     background: url(nth($bg-hover, $j)) no-repeat;
                     background-size: cover;
                     background-position: center center;
+                    transition: opacity 1s ease;
+                    opacity: 1;
                 }
             }
         }
