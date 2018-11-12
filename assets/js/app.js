@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
+import tippy from 'tippy.js'
 
 // x4 soft colors to get more chances
 let primaryColors = [
@@ -13,6 +14,7 @@ let secondaryColors = {
     '#e6fffb' : '#204bbb', // bleu / blue
     '#ffe9ba' : '#3201bc', // beige / purple
     '#d5dfd6' : '#d81d32', // grey / red
+    '#ff0000' : "#aefffb",
 };
 
 let primaryColor = primaryColors[Math.floor(Math.random() * primaryColors.length)];
@@ -50,10 +52,6 @@ $(document).ready(() => {
         }
     });
 
-    $('#presentation-left-background').css({
-        'backgroundImage': `url('build/images/skills/${colorDir}/odc-images-presentation-general.png')`,
-    });
-
     $('#clients-grid a img').each(function(i, img) {
         const classes = ['pen-1', 'pen-2', 'pen-3'];
         $(img).parent().addClass(classes[Math.floor(Math.random() * classes.length)]);
@@ -71,6 +69,12 @@ $(document).ready(() => {
             $(img).parent().css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
         }
     });
+});
+
+tippy('.project-item', {
+    followCursor: true,
+    offset: '100, 30',
+    placement: 'right',
 });
 
 $(document).on('scroll', function () {

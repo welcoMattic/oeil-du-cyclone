@@ -102,6 +102,16 @@ a:hover {color: var(--theme-odc)}
                 word-wrap: break-word;
                 z-index: 100;
             }
+
+            .project-tooltip {
+                display: block;
+                position: absolute;
+                z-index: 9999;
+            }
+
+            // .project-tooltip {
+            //     display: none;
+            // }
         }
     }
 
@@ -444,6 +454,43 @@ footer {
         position: absolute;
         bottom: -.8rem;
         left: -.8rem;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--theme-odc);
+        background-color: var(--theme-odc-sec);
+        background-image: radial-gradient(var(--theme-odc) 15%, transparent 16%), radial-gradient(var(--theme-odc) 15%, transparent 16%);
+        background-size: 7px 7px;
+        background-position: 0 0, 10px 10px;
+    }
+}
+
+.stroke--reverse {
+    position: relative;
+    display: block;
+    padding: .3rem .6rem;
+    border: 2px solid var(--theme-odc);
+    background-color: var(--theme-odc-sec);
+
+    &:first-child {
+        border-bottom-width: 1px;
+        &::before {
+            bottom: -.9rem;
+        }
+    }
+    &:last-child {
+        border-top-width: 1px;
+        &::before {
+            border-top-width: 1px;
+            bottom: -.7rem;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -.8rem;
+        left: .8rem;
         z-index: -10;
         width: 100%;
         height: 100%;
