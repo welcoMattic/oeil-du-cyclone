@@ -544,22 +544,38 @@ footer {
         padding: 0;
     }
 
-    .project-content {
-        padding: 0px 15px 15px 15px;
+    #projects-block .project-content {
+        padding: 0px;
     }
 
     #projects-block {
         .project-tags {
-            width: 90%;
+            width: 95%;
+            margin: 20px auto;
         }
     }
 
-    #projects-block .bg-project-content .carousel-item img {
-        max-width: 480px;
+    #clients-block #clients-grid {
+        margin: 0 30px;
     }
 
-    #clients-block #clients-grid img {
-        padding: 20px;
+    #clients-block #clients-grid a img {
+        padding: 5px;
+        height: 100px;
+    }
+
+    #projects-block .bg-project-content .carousel-item img {
+        max-width: 360px;
+    }
+
+    #presentation-block #presentation-right {
+        padding-left: 30px;
+    }
+
+    #contact-block h3 {
+        margin-left: 0px;
+        font-size: 420px;
+        margin-top: -140px;
     }
 }
 
@@ -567,6 +583,10 @@ footer {
     #clients-block #clients-grid img {
         padding: 20px;
         height: 100px;
+    }
+
+    #projects-block .bg-project-content .carousel-item img {
+        max-width: 480px;
     }
 }
 
