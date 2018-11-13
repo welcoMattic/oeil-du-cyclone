@@ -60,6 +60,7 @@ a:hover {color: var(--theme-odc)}
 }
 
 .header-container {
+    z-index: 9999;
     .text-superhero:hover {
         color: var(--theme-odc);
         text-shadow: 4px 4px 0px var(--theme-odc-sec), 5px 5px 0px var(--theme-odc), 8px 8px 0px var(--theme-odc-sec), 9px 9px 0px var(--theme-odc), 12px 12px 0px var(--theme-odc-sec), 13px 13px 0px var(--theme-odc);
@@ -261,7 +262,6 @@ a:hover {color: var(--theme-odc)}
             }
 
             .card-body {
-                text-transform: uppercase;
                 background-color: var(--theme-odc-sec);
                 border: 1px solid var(--theme-odc);
                 border-radius: 0px;

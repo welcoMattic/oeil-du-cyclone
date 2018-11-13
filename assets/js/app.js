@@ -4,7 +4,7 @@ import tippy from 'tippy.js'
 
 // x4 soft colors to get more chances
 let primaryColors = [
-    '#ff5500', '#680ff4', '#3bdbb5', '#fff800', '#ff31ac', '#ff0000', // hard colors
+    '#ff5500', '#680ff4', '#3bdbb5', '#fff800', '#ff31ac', '#aefffb', // hard colors
     '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
     '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
     '#e6fffb', '#ffe9ba', '#d5dfd6', // soft colors
@@ -14,7 +14,7 @@ let secondaryColors = {
     '#e6fffb' : '#204bbb', // bleu / blue
     '#ffe9ba' : '#3201bc', // beige / purple
     '#d5dfd6' : '#d81d32', // grey / red
-    '#ff0000' : "#aefffb",
+    '#aefffb' : "#ff0000",
 };
 
 let primaryColor = primaryColors[Math.floor(Math.random() * primaryColors.length)];
