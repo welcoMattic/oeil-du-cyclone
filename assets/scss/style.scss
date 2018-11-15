@@ -320,6 +320,7 @@ a:hover {color: var(--theme-odc)}
             width: 100%;
             background-color: var(--theme-odc);
             background-image: url('../images/adobe-ps.svg');
+            background-repeat: no-repeat;
         }
     
         #logo-illustrator {
@@ -327,6 +328,7 @@ a:hover {color: var(--theme-odc)}
             width: 100%;
             background-color: var(--theme-odc);
             background-image: url('../images/adobe-ai.svg');
+            background-repeat: no-repeat;
         }
     
         #logo-indesign {
@@ -334,6 +336,7 @@ a:hover {color: var(--theme-odc)}
             width: 100%;
             background-color: var(--theme-odc);
             background-image: url('../images/adobe-id.svg');
+            background-repeat: no-repeat;
         }
     }
 }
@@ -372,15 +375,15 @@ a:hover {color: var(--theme-odc)}
             }
 
             &.pen-1:hover::before {
-                background-image: url(../images/clients/motif/odc-entoure-1.png);
+                background-image: url(../images/clients/motif/odc-entoure-1.svg);
             }
 
             &.pen-2:hover::before {
-                background-image: url(../images/clients/motif/odc-entoure-2.png);
+                background-image: url(../images/clients/motif/odc-entoure-2.svg);
             }
 
             &.pen-3:hover::before {
-                background-image: url(../images/clients/motif/odc-entoure-3.png);
+                background-image: url(../images/clients/motif/odc-entoure-3.svg);
             }
 
             &:hover {
@@ -569,7 +572,7 @@ footer {
     }
 
     #presentation-block #presentation-right {
-        padding-left: 30px;
+        padding-left: 20px;
     }
 
     #contact-block h3 {
@@ -577,6 +580,11 @@ footer {
         font-size: 420px;
         margin-top: -140px;
     }
+
+    #presentation-block .softwares li {
+        margin-right: 20px;
+    }
+
 }
 
 @include media-breakpoint-down('md') {
