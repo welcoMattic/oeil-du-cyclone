@@ -57,16 +57,16 @@ $(document).ready(() => {
         $(img).parent().addClass(classes[Math.floor(Math.random() * classes.length)]);
 
         if (colorDir === 'bleu') {
-            $(img).parent().css({'filter': 'invert(15%) sepia(56%) saturate(6806%) hue-rotate(227deg) brightness(85%) contrast(77%)'});
-            $(img).parent().css({'filter': 'invert(15%) sepia(56%) saturate(6806%) hue-rotate(227deg) brightness(85%) contrast(77%)'});
+            $(img).css({'filter': 'invert(15%) sepia(56%) saturate(6806%) hue-rotate(227deg) brightness(85%) contrast(77%)'});
+            $(img).css({'filter': 'invert(15%) sepia(56%) saturate(6806%) hue-rotate(227deg) brightness(85%) contrast(77%)'});
         }
         if (colorDir === 'violet') {
-            $(img).parent().css({'filter': 'invert(13%) sepia(88%) saturate(5645%) hue-rotate(258deg) brightness(69%) contrast(127%)'});
-            $(img).parent().css({'filter': 'invert(13%) sepia(88%) saturate(5645%) hue-rotate(258deg) brightness(69%) contrast(127%)'});
+            $(img).css({'filter': 'invert(13%) sepia(88%) saturate(5645%) hue-rotate(258deg) brightness(69%) contrast(127%)'});
+            $(img).css({'filter': 'invert(13%) sepia(88%) saturate(5645%) hue-rotate(258deg) brightness(69%) contrast(127%)'});
         }
         if (colorDir === 'rouge') {
-            $(img).parent().css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
-            $(img).parent().css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
+            $(img).css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
+            $(img).css({'filter': 'invert(19%) sepia(69%) saturate(6671%) hue-rotate(346deg) brightness(89%) contrast(89%)'});
         }
     });
 });
