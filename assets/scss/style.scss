@@ -547,6 +547,12 @@ footer {
         padding: 0;
     }
 
+    .nav-link {
+        display: inline-flex;
+        margin-right: 0 !important;
+        padding: 0.5rem 0.75rem;
+    }
+
     #projects-block .project-content {
         padding: 0px;
     }
