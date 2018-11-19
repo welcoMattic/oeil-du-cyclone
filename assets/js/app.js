@@ -1,6 +1,11 @@
 import $ from 'jquery';
 import 'bootstrap';
-import tippy from 'tippy.js'
+import tippy from 'tippy.js';
+import lozad from 'lozad';
+
+const el = document.querySelector('img');
+const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+observer.observe();
 
 // x4 soft colors to get more chances
 let primaryColors = [
@@ -110,10 +115,12 @@ $('.skill-content').on('shown.bs.collapse', function (event) {
     $('#presentation-left-background')
         .css('background-image', `url(build/images/skills/${bgFile})`)
         .css('background-position', bgPosition);
+    observer.observe();
 });
 
 $('#collapseSkill1, #collapseSkill2, #collapseSkill3, #collapseSkill4').on('hidden.bs.collapse', event => {
     $('#presentation-left-background')
         .css('background-image', `url(build/images/skills/odc-images-presentation-general.png)`)
         .css('background-position', '80% 20%');
+    observer.observe();
 });
