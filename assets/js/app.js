@@ -3,7 +3,7 @@ import 'bootstrap';
 import tippy from 'tippy.js';
 import lozad from 'lozad';
 
-const el = document.querySelector('img');
+const el = document.querySelectorAll('img');
 const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
 observer.observe();
 
