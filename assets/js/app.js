@@ -3,10 +3,6 @@ import 'bootstrap';
 import tippy from 'tippy.js';
 import lozad from 'lozad';
 
-const el = document.querySelectorAll('img');
-const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
-observer.observe();
-
 // x4 soft colors to get more chances
 let primaryColors = [
     '#ff5500', '#680ff4', '#3bdbb5', '#fff800', '#ff31ac', '#aefffb', // hard colors
@@ -37,6 +33,14 @@ switch (primaryColor) {
         colorDir = 'rouge';
     break;
 }
+
+const elements = document.querySelectorAll('img');
+const observer = lozad(elements, {
+    load: el => {
+        el.src = el.getAttribute('data-src');
+    }
+});
+observer.observe();
 
 $(document).ready(() => {
     $('html').attr('style', `--theme-odc: ${primaryColor}; --theme-odc-sec: ${secondaryColor}; --dark: ${secondaryColor}`);
