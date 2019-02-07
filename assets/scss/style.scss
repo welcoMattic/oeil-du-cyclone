@@ -111,9 +111,23 @@ a:hover {color: var(--theme-odc)}
                 z-index: 9999;
             }
 
-            // .project-tooltip {
-            //     display: none;
-            // }
+            .badge-new {
+                z-index: 9999;
+                width: 140px;
+                height: 140px;
+                vertical-align: middle;
+                text-transform: uppercase;
+                font-family: 'Fivo Sans', sans-serif;
+                font-size: 34px;
+                color: var(--theme-odc);
+                background-color: var(--theme-odc-sec);
+                padding: 45px 15px 15px 15px;
+                border-radius: 50%;
+                position: absolute;
+                left: 4%;
+                top: 14%;
+                transform: rotate(-14deg);
+            }
         }
     }
 
