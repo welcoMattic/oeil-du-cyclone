@@ -605,9 +605,17 @@ footer {
         margin-right: 20px;
     }
 
+    #projects-block .card .project-item .badge-new {
+        width: 40px;
+        height: 40px;
+        font-size: 9px;
+        padding: 15px 5px 5px 5px;
+        left: 2%;
+        top: 4%;
+    }
 }
 
-@include media-breakpoint-down('md') {
+@media (min-width: 768px) and (max-width: 991.98px) {
     #clients-block #clients-grid img {
         padding: 20px;
         height: 100px;
@@ -616,9 +624,18 @@ footer {
     #projects-block .bg-project-content .carousel-item img {
         max-width: 480px;
     }
+
+    #projects-block .card .project-item .badge-new {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+        padding: 27px 5px 5px 5px;
+        left: 5%;
+        top: 20%;
+    }
 }
 
-@include media-breakpoint-down('lg') {
+@media (min-width: 992px) and (max-width: 1199.98px) {
     #projects-block .bg-project-content .carousel-item img {
         max-width: 720px;
     }
